@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid blue;
+}
+
+.searchBar{
+    /* border: 1px solid red; */
+    width:300px;
+    display: flex;
+    justify-content: space-around;
+    height: 23px;
+}
+
+.brandName{
+    font-size: 24px;
+}
+
+
+.banner{
+    scroll-snap-type: x mandatory;
+    height: 30rem;
+    overflow-x:scroll;
+    display: flex;
+
+}
+
+.bannerImg img{
+    scroll-snap-align: start;
+    height: 20rem;
+    width: 100vw;
+    background-size:contain;
+    padding: 5px;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
