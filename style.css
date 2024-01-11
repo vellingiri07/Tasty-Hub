@@ -1,15 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing:border-box;
 }
 
+body{
+    font-family: 'Nunito Sans', sans-serif;
+}
+
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    border: 1px solid blue;
+    padding: 18px;
+    /* border: 1px solid blue; */
 }
 
 .searchBar{
@@ -24,30 +30,46 @@ nav{
     font-size: 24px;
 }
 
+.categoriesContainer{
+    display: flex;
+    overflow-x: scroll;
+    /* border: 1px solid blue; */
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+    
+}
+
+.categoriesContainer div{
+    /* border: 1px solid red; */
+    padding: 5px;
+
+}
+
+.categories{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: 200px;
+}
+
+.categories:hover{
+    box-shadow: 2px 4px 5px;
+    border-radius: 10px;
+}
+
+.categories img{
+    height: 30px;
+    width: 30px;
+}
+ 
+
+.re
 
 
 ::-webkit-scrollbar{
     
     display: none;
-}
-
-.categories{
-    display: flex;
-    overflow-x: scroll;
-    border: 1px solid blue;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 5px;
-}
-
-.categories div{
-    border: 1px solid red;
-    padding: 5px;
-}
-
-.categories div:first-child{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
