@@ -1,51 +1,81 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Nunito Sans', sans-serif;
 }
 
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px;
+    padding: 8px;
     /* border: 1px solid blue; */
 }
 
-.searchBar{
+.searchBar {
     /* border: 1px solid red; */
-    width:300px;
+    width: 300px;
     display: flex;
     justify-content: space-around;
     height: 23px;
 }
 
-.brandName{
-    font-size: 24px;
+.brandName {
+    font-size:xx-large;
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
 }
 
-.categoriesContainer{
+.banner{
+    width: 100%;
+}
+
+.banner img{
+    width: 100%;
+    height: 500px;
+    border-radius: 4px;
+}
+
+
+.banner h1{
+    position: absolute;
+    top: 250px;
+    left: 25px;
+    color: white;
+    font-size: 50px;
+}
+
+.bannerButton{
+    position: absolute;
+    top:320px;
+    left: 25px;
+    width: 130px;
+    height: 40px;
+}
+
+.categoriesContainer {
     display: flex;
     overflow-x: scroll;
     /* border: 1px solid blue; */
     justify-content: space-evenly;
     align-items: center;
     padding: 5px;
-    
+
 }
 
-.categoriesContainer div{
+.categoriesContainer div {
     padding-top: 20px;
 
 }
 
-.categories{
+.categories {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,64 +85,64 @@ nav{
 }
 
 
-.categories img{
+.categories img {
     height: 50px;
     width: 50px;
 }
 
 
- 
-.recipesContainer{
+
+.recipesContainer {
     display: grid;
-    grid-template-columns: repeat( 5,400px);
+    grid-template-columns: repeat(4, 400px);
     justify-content: center;
     column-gap: 20px;
     overflow-x: scroll;
     padding-top: 20px;
 }
 
-.recipesCards{
+.recipesCards {
     /* border: 2px solid blueviolet; */
-    height: 550px;
+    height: 450px;
     border-radius: 10px;
-    
+
 }
 
-.recipesCards span{
+.recipesCards span {
     padding-left: 5px;
-   
+
     display: flex;
     flex-direction: column;
     text-align: start;
 }
 
-.recipesNames{
+.recipesNames {
     padding-top: 10px;
     font-weight: 500;
     font-size: 29px;
 }
 
-.recipesDuration{
+.recipesDuration {
     font-size: 21px;
 }
 
-.recipesCards img{
-    height:300px ;
+.recipesCards img {
+    height: 300px;
     width: 100%;
     border-radius: 15px;
 }
 
-::-webkit-scrollbar{
-    
+::-webkit-scrollbar {
+
     display: none;
 }
 
 /* Media Queries */
 
-@media (max-width:400px){
-    .recipesContainer{
+@media (max-width:400px) {
+    .recipesContainer {
         display: grid;
-        grid-template-columns: repeat(2,180px);
+        grid-template-columns: repeat(2, 180px);
         justify-content: center;
         row-gap: 10px;
         column-gap: 2px;
