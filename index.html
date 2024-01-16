@@ -20,7 +20,7 @@
 
         <div class="searchBar">
             <input type="search" id="searchBar" class="searchInput" placeholder="search your dish">
-            <img src="./Photos/non stick pan.png" alt="">
+            <img src="./Photos/non stick pan.png" class="searchIcon" alt="">
         </div>
     </nav>
 
@@ -38,22 +38,25 @@
     <!-- Categories Container -->
 
     <div class="categoriesContainer">
-        <div class="categories">
-            <img src="./Photos/salad_11667881.png" alt="">Veg
+        <div class="categories" onclick="vegRecipes()" id="veg">
+            <img src="./Photos/salad_11667881.png" >Veg
         </div>
-        <div class="categories nonVeg">
+        <div class="categories nonVeg" onclick="nonVegRecipes()">
             <img src="./Photos/roasted-chicken_7831406.png" alt="">Non-Veg
         </div>
-        <div class="categories">
+        <div class="categories " onclick="seaFoodRecipes()">
+            <img src="./Photos/seafood.png" alt="">Seafood
+        </div>
+        <div class="categories" onclick="soupRecipes()">
             <img src="./Photos/soup_6175083 (1).png" alt="">Soup
         </div>
-        <div class="categories">
+        <div class="categories" onclick="snacksRecipes()">
             <img src="./Photos/nachos_4163909.png" alt="">Snacks
         </div>
-        <div class="categories">
+        <div class="categories" onclick="saladsRecipes()">
             <img src="./Photos/berries_8799436.png" alt="">Salads
         </div>
-        <div class="categories">
+        <div class="categories" onclick="dessertsRecipes()">
             <img src="./Photos/sweets_3081792.png" alt="">Desserts
         </div>
     </div>
@@ -64,34 +67,11 @@
     <div class="recipesContainer">
 
         <div class="recipesCards">
-            <img src= alt="">
-            <span class="recipesNames"></span>
-            <!-- <span class="recipesDuration"></span> -->
+            <img src="./Photos/Mango.jpg" alt="">
+            <span class="recipesNames">Mango Juice</span>
+          
         </div>
 
-        <div class="recipesCards">
-            <img src= alt="">
-            <span class="recipesNames"></span>
-            <!-- <span class="recipesDuration"></span> -->
-        </div>
-
-        <div class="recipesCards">
-            <img src= alt="">
-            <span class="recipesNames"></span>
-            <!-- <span class="recipesDuration"></span> -->
-        </div>
-
-        <div class="recipesCards">
-            <img src= alt="">
-            <span class="recipesNames"></span>
-            <!-- <span class="recipesDuration"></span> -->
-        </div>
-
-        <div class="recipesCards">
-            <img src= alt="">
-            <span class="recipesNames"></span>
-            <!-- <span class="recipesDuration"></span> -->
-        </div>
 
     </div> 
 
