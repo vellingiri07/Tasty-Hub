@@ -1,7 +1,9 @@
 
 const banner = document.querySelector('.banner')
 
-const bannerModal = document.querySelector('.bannerModalDetails')
+const bannerModalDetails = document.querySelector('.bannerModalDetails')
+
+const bannerModalHead=document.querySelector('.bannerModalHead')
 
 function randomBanner(bannerProps) {
     let bannerData = bannerProps.meals[0]
@@ -10,23 +12,38 @@ function randomBanner(bannerProps) {
 
     const mealImage = bannerData.strMealThumb;
 
+    // Banner Script
+
     banner.innerHTML = `<div class="bannerContent">
     <h1>${mealName}</h1>
-   <button  onclick="openBannerModal()">Click to Cook</button>
-</div>
-<div>
+    <button  onclick="openBannerModal()">Click to Cook</button>
+    </div>
+    <div>
     <img src=${mealImage} alt="${mealName}photo">
-</div>`
+    </div>`
 
+
+    // Banner Modal script
     const mealInstuctions = bannerData.strInstructions;
 
-    bannerModal.innerHTML=` 
+    let mealIngrds = bannerData.strIngredient1;
+
+    let mealMeasure = bannerData.strMeasure;
+
+    let mealYoutube=bannerData.strYoutube;
+
+    // Fetch data for Banner Modal
+    
+    bannerModalHead.innerHTML=` <img src=${mealImage} alt="${mealName}photo">
+    <span>${mealName}</span>`
+
+    bannerModalDetails.innerHTML = ` 
     <div class="bannerIngrediants">
         <h2>Ingrediants</h2>
-        <ul>
-            <li></li>
+    <ul>
+        <li>${mealIngrds} - ${mealMeasure}</li>
 
-        </ul>
+    </ul>
 
     </div>
 
@@ -38,25 +55,15 @@ function randomBanner(bannerProps) {
 
     <div>
         <h2>YouTube Link</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, exercitationem. Suscipit tenetur
-            officiis commodi fugit.</p>
+        <iframe width="923" height="519" src=${mealYoutube} title="Chicken Teriyaki Casserole" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
     </div>`
 
 
 
-    // let mealIngrds = bannerData.strIngredient1;
-
-    // let mealMeasure=bannerData.strMeasure;
     // mealMeasure.array.forEach(element => {
     //     console.log('each', mealMeasure)
     // });
-    // bannerModal.innerHTML = ` <div class="bannerIngrediants">
-    //     <h2>Ingrediants</h2>
-    //     <ul>
-    //         <li>${mealIngrds} - ${mealMeasure}</li>
-
-    //     </ul>
-
+    // bannerModal.innerHTML = 
     // </div>`
     // // }
 
