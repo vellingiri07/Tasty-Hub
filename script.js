@@ -26,9 +26,11 @@ function randomBanner(bannerProps) {
     // Banner Modal script
     const mealInstuctions = bannerData.strInstructions;
 
-    let mealIngrds = bannerData.strIngredient1;
+    // let mealIngrds = bannerData.strIngredient1;
 
     let mealMeasure = bannerData.strMeasure;
+
+    
 
     let mealYoutube=bannerData.strYoutube;
 
@@ -36,12 +38,27 @@ function randomBanner(bannerProps) {
     
     bannerModalHead.innerHTML=` <img src=${mealImage} alt="${mealName}photo">
     <span>${mealName}</span>`
+    
 
     bannerModalDetails.innerHTML = ` 
     <div class="bannerIngrediants">
         <h2>Ingrediants</h2>
     <ul>
-        <li>${mealIngrds} - ${mealMeasure}</li>
+        <li>${bannerData.strIngredient1} - ${bannerData.strMeasure1}</li>
+        <li>${bannerData.strIngredient2} - ${bannerData.strMeasure2}</li>
+        <li>${bannerData.strIngredient3} - ${bannerData.strMeasure3}</li>
+        <li>${bannerData.strIngredient4} - ${bannerData.strMeasure4}</li>
+        <li>${bannerData.strIngredient5} - ${bannerData.strMeasure5}</li>
+        <li>${bannerData.strIngredient6} - ${bannerData.strMeasure6}</li>
+        <li>${bannerData.strIngredient7} - ${bannerData.strMeasure7}</li>
+        <li>${bannerData.strIngredient8} - ${bannerData.strMeasure8}</li>
+        <li>${bannerData.strIngredient9} - ${bannerData.strMeasure9}</li>
+        <li>${bannerData.strIngredient10} - ${bannerData.strMeasure10}</li>
+        <li>${bannerData.strIngredient11} - ${bannerData.strMeasure11}</li>
+        <li>${bannerData.strIngredient9} - ${bannerData.strMeasure12}</li>
+        <li>${bannerData.strIngredient13} - ${bannerData.strMeasure13}</li>
+        <li>${bannerData.strIngredient14} - ${bannerData.strMeasure14}</li>
+        <li>${bannerData.strIngredient15} - ${bannerData.strMeasure15}</li>
 
     </ul>
 
@@ -55,17 +72,10 @@ function randomBanner(bannerProps) {
 
     <div>
         <h2>YouTube Link</h2>
-        <iframe width="923" height="519" src=${mealYoutube} title="Chicken Teriyaki Casserole" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>
+        <iframe frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="Array Iteration: 8 Methods - map, filter, reduce, some, every, find, findIndex, forEach" width="100%" height="500px" src="https://www.youtube.com/embed/Urwzk6ILvPQ?autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fkalvium.community&amp;widgetid=1" id="widget2" data-gtm-yt-inspected-7="true"></iframe>
     </div>`
 
 
-
-    // mealMeasure.array.forEach(element => {
-    //     console.log('each', mealMeasure)
-    // });
-    // bannerModal.innerHTML = 
-    // </div>`
-    // // }
 
     console.log('meals', bannerData)
 
