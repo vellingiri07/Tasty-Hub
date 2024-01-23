@@ -21,12 +21,21 @@ nav {
 
 .searchBar {
     /* border: 1px solid red; */
-    width: 300px;
+    width: 1000px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     height: 29px;
     column-gap: 3px;
-    width: 800px;
+}
+
+.searchBar input{
+    width: 250px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.searchBar img{
+    height:40px;
 }
 
 .brandName {
