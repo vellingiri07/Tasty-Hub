@@ -1,10 +1,6 @@
 
 const banner = document.querySelector('.banner')
 
-const bannerModalDetails = document.querySelector('.bannerModalDetails')
-
-const bannerModalHead = document.querySelector('.bannerModalHead')
-
 function randomBanner(bannerProps) {
     let bannerData = bannerProps.meals[0]
 
@@ -22,11 +18,11 @@ function randomBanner(bannerProps) {
     <img src=${mealImage} alt="${mealName}photo">
     </div>`
 
-
-
     console.log('meals', bannerData)
 
 }
+
+// Banner Modal Script
 
 const bannerModalContainer = document.querySelector('.bannerModalContainer');
 
@@ -34,32 +30,22 @@ function bannerModals(bannerModalProps) {
 
     const bannerModal = bannerModalProps.meals[0];
 
-    const modalMealName=bannerModal.strMeal;
+    const modalMealName = bannerModal.strMeal;
 
-    const modalMealImg=bannerModal.strMealThumb;
+    const modalMealImg = bannerModal.strMealThumb;
 
-    const modalMealInstruction=bannerModal.strInstructions;
+    const modalMealInstruction = bannerModal.strInstructions;
 
-    const modalMealYoutube=bannerModal.strYoutube;
-
-    const modalIngreds=[];
-
-    modalIngreds.push(bannerModal.strIngrediant1)
-    
-
-   for(let i of modalIngreds){
-        console.log(i)
-   }
-
+    const modalMealYoutube = bannerModal.strYoutube;
 
     bannerModalContainer.innerHTML = `<div class="bannerModalClose ">
     <img onclick="closeBannerModal()" src="./Photos/close_FILL0_wght400_GRAD0_opsz24.svg" alt="close menu icon">
-</div>
-<div class="bannerModalHead ">
+    </div>
+    <div class="bannerModalHead ">
     <img src=${modalMealImg} alt="">
     <span>${modalMealName}</span>
-</div>
-<div class="bannerModalDetails ">
+    </div>
+    <div class="bannerModalDetails ">
 
     <div class="bannerIngrediants">
         <h2>Ingrediants</h2>
@@ -91,12 +77,45 @@ function bannerModals(bannerModalProps) {
 
 }
 
-fetch('https://www.themealdb.com/api/json/v1/1/random.php')
+// Home page Random Recipes Card 
+
+const recipesCardContainer = document.querySelector('.recipesCardContainer');
+
+function recipesCards(recipesCardsProps) {
+
+    const recipesCard = recipesCardsProps.meals[0]
+
+    const cardsMealImage = recipesCard.strMealThumb;
+
+    const cardsMealName = recipesCard.strMeal;
+
+    recipesCardContainer.innerHTML += `
+    <div class="recipesCards">
+        <img src=${cardsMealImage} >
+        <span class="recipesNames">${cardsMealName}</span>
+      
+    </div>`
+}
+
+// Random Meal API Url 
+
+
+const RandomMealUrl=('https://www.themealdb.com/api/json/v1/1/random.php')  
+
+
+fetch(RandomMealUrl)
     .then(res => res.json())
-    .then(data => { randomBanner(data), bannerModals(data) })
+    .then(data => { randomBanner(data), bannerModals(data), recipesCards(data) })
     .catch(error => ('error', error))
 
 
+  
+for (let i = 1;i<20; i++) {
+    fetch(RandomMealUrl)
+        .then(res => res.json())
+        .then(data => recipesCards(data))
+        .catch(error => ('error', error))
+}
 
 
 function openBannerModal() {

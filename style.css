@@ -167,24 +167,24 @@ nav {
 
 /* Recipes Styles */
 
-.recipesContainer {
+.recipesCardContainer {
     display: grid;
     grid-template-columns: repeat(4, 400px);
     justify-content: center;
     column-gap: 20px;
+    row-gap: 20px;
     padding-top: 20px;
 }
 
 .recipesCards {
     /* border: 2px solid blueviolet; */
-    height: 450px;
+    height: 400px;
     border-radius: 10px;
-
+    cursor: pointer;
 }
 
 .recipesCards span {
     padding-left: 5px;
-
     display: flex;
     flex-direction: column;
     text-align: start;
@@ -293,7 +293,7 @@ nav {
         width: 35px;
     }
 
-    .recipesContainer {
+    .recipesCardContainer {
         display: grid;
         grid-template-columns: repeat(4, 240px);
         justify-content: center;
@@ -403,7 +403,7 @@ nav {
         width: 30px;
     }
 
-    .recipesContainer {
+    .recipesCardContainer {
         display: flex;
         flex-direction: column;
     }
