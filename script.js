@@ -1,14 +1,14 @@
 
 const banner = document.querySelector('.banner')
 
+// Banner Script
+
 function randomBanner(bannerProps) {
     let bannerData = bannerProps.meals[0]
 
     const mealName = bannerData.strMeal;
 
     const mealImage = bannerData.strMealThumb;
-
-    // Banner Script
 
     banner.innerHTML = `<div class="bannerContent">
     <h1>${mealName}</h1>
@@ -38,40 +38,58 @@ function bannerModals(bannerModalProps) {
 
     const modalMealYoutube = bannerModal.strYoutube;
 
-    bannerModalContainer.innerHTML = `<div class="bannerModalClose ">
-    <img onclick="closeBannerModal()" src="./Photos/close_FILL0_wght400_GRAD0_opsz24.svg" alt="close menu icon">
-    </div>
+
+    // Banner Modal Image and Recipes Name
+
+    const bannerModalHead = document.querySelector('.bannerModalHead')
+
+    bannerModalHead.innerHTML = ` 
     <div class="bannerModalHead ">
     <img src=${modalMealImg} alt="">
-    <span>${modalMealName}</span>
-    </div>
-    <div class="bannerModalDetails ">
+    <span>${modalMealName}</span>`
 
-    <div class="bannerIngrediants">
-        <h2>Ingrediants</h2>
-        <ul>
-            <li></li>
 
-        </ul>
+    // Banner Modal Ingredients Fetch
 
-    </div>
 
-    <div class="bannerInstruction">
-        <div >
-            <h2>Instructions</h2>
-            <p>${modalMealInstruction}</p>
-        </div>
-    </div>
+    const bannerIngredients = document.querySelector('.bannerIngrediants');
+
+     // Banner Modal Measure Array
+
+    const bannerMeasureArray = [bannerModal.strMeasure1, bannerModal.strMeasure2, bannerModal.strMeasure3,
+    bannerModal.strMeasure4, bannerModal.strMeasure5, bannerModal.strMeasure6, bannerModal.strMeasure7, bannerModal.strMeasure8, bannerModal.strMeasure9, bannerModal.strMeasure10, bannerModal.strMeasure11, bannerModal.strMeasure12, bannerModal.strMeasure13,
+    bannerModal.strMeasure14, bannerModal.strMeasure15, bannerModal.strMeasure16, bannerModal.strMeasure17, bannerModal.strMeasure18, bannerModal.strMeasure19, bannerModal.strMeasure20];
     
+    // Banner Modal Ingredients Array
+    const bannerIngredientsArray = [bannerModal.strIngredient1, bannerModal.strIngredient2, bannerModal.strIngredient3,
+    bannerModal.strIngredient4, bannerModal.strIngredient5, bannerModal.strIngredient6, bannerModal.strIngredient7, bannerModal.strIngredient8, bannerModal.strIngredient9, bannerModal.strIngredient10, bannerModal.strIngredient11, bannerModal.strIngredient12, bannerModal.strIngredient13,
+    bannerModal.strIngredient14, bannerModal.strIngredient15, bannerModal.strIngredient16, bannerModal.strIngredient17, bannerModal.strIngredient18, bannerModal.strIngredient19, bannerModal.strIngredient20];
 
+    for (let i = 0; i <= 20; i++) {
+        if (bannerIngredientsArray.length !== 0) {
+            bannerIngredients.innerHTML += ` <ul>
+            <li>${bannerIngredientsArray[i]} - ${bannerMeasureArray[i]}</li>
 
-    <div>
-        <h2>YouTube Link</h2>
-        <iframe src=${modalMealYoutube} width="923" height="519" src=  frameborder="0"></iframe>
+        </ul>`
+        }
+    }
 
-    </div>
+    // Banner Modal Instruction Fetch
 
+    const bannerInstruction = document.querySelector('.bannerInstruction');
+
+    bannerInstruction.innerHTML = `<div >
+    <h2>Instructions</h2>
+    <p>${modalMealInstruction}</p>
     </div>`
+
+    // Banner Model Youtube Fetch
+
+    const bannerYoutube = document.querySelector('.bannerYoutube');
+
+    bannerYoutube.innerHTML = ` <h2>YouTube Link</h2>
+    <iframe src=${modalMealYoutube} width="923" height="519" src=  frameborder="0"></iframe>
+`
 
     console.log('Banner Model', bannerModal)
 
@@ -100,7 +118,7 @@ function recipesCards(recipesCardsProps) {
 // Random Meal API Url 
 
 
-const RandomMealUrl=('https://www.themealdb.com/api/json/v1/1/random.php')  
+const RandomMealUrl = ('https://www.themealdb.com/api/json/v1/1/random.php')
 
 
 fetch(RandomMealUrl)
@@ -109,8 +127,8 @@ fetch(RandomMealUrl)
     .catch(error => ('error', error))
 
 
-  
-for (let i = 1;i<20; i++) {
+
+for (let i = 1; i < 20; i++) {
     fetch(RandomMealUrl)
         .then(res => res.json())
         .then(data => recipesCards(data))
