@@ -119,12 +119,14 @@ function recipesCards(recipesCardsProps) {
     const cardsMealName = recipesCard.strMeal;
 
     recipesCardContainer.innerHTML += `
-    <div class="recipesCards">
+    <div class="recipesCards" onclick=recipesCardModal()>
         <img src=${cardsMealImage} >
         <span class="recipesNames">${cardsMealName}</span>
       
     </div>`
 }
+
+
 
 // Random Meal API Url 
 
@@ -139,7 +141,7 @@ fetch(RandomMealUrl)
 
 
 
-for (let i = 1; i < 20; i++) {
+for (let i = 1; i <=20; i++) {
     fetch(RandomMealUrl)
         .then(res => res.json())
         .then(data => recipesCards(data))
