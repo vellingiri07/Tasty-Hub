@@ -58,7 +58,9 @@ nav {
     justify-content: space-evenly;
     align-items: center;
     padding: 15px;
-    background-color: rgb(222, 222, 222);
+    background: url(./Photos/Italian\ food\ background\ with\ pasta\ realistic\ composition.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .bannerContent {
@@ -69,8 +71,9 @@ nav {
     row-gap: 6px;
 }
 
-.bannerContent h2 {
-    font-size: 18px;
+.bannerContent h1 {
+    font-size: 35px;
+    color: white;
 }
 
 
@@ -78,6 +81,8 @@ nav {
     width: 350px;
     height: 300px;
     border-radius: 20px;
+    display: flex;
+    align-items: center;
 }
 
 /* Banner Model Style */
