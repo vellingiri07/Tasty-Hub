@@ -107,6 +107,8 @@ nav {
     justify-content: flex-end;
     padding: 10px;
     padding-right: 50px;
+    position:sticky;
+    top: 0;
 }
 
 .bannerModalClose img,.recipesCardModalClose img{
