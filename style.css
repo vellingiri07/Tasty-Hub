@@ -411,15 +411,17 @@ nav {
         height: 30px;
         width: 30px;
     }
+   
 
     .recipesCardContainer {
         display: flex;
         flex-direction: column;
+        row-gap: 1px;
     }
 
     .recipesCards {
         /* border: 2px solid blueviolet; */
-        height: 300px;
+        height: 270px;
         border-radius: 10px;
 
     }
