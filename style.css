@@ -107,8 +107,6 @@ nav {
     justify-content: flex-end;
     padding: 10px;
     padding-right: 50px;
-    position:sticky;
-    top: 0;
 }
 
 .bannerModalClose img,.recipesCardModalClose img{
@@ -411,17 +409,15 @@ nav {
         height: 30px;
         width: 30px;
     }
-   
 
     .recipesCardContainer {
         display: flex;
         flex-direction: column;
-        row-gap: 1px;
     }
 
     .recipesCards {
         /* border: 2px solid blueviolet; */
-        height: 270px;
+        height: 300px;
         border-radius: 10px;
 
     }
@@ -433,6 +429,6 @@ nav {
     }
 
     .recipesCards {
-        padding: 15px;
+        padding: 10px;
     }
 }

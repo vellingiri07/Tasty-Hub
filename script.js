@@ -43,7 +43,7 @@ function bannerModals(bannerModalProps) {
 
     const bannerModalHead = document.querySelector('.bannerModalHead')
 
-    bannerModalHead.innerHTML = ` 
+    bannerModalHead.innerHTML += ` 
     <div class="bannerModalHead ">
     <img src=${modalMealImg} alt="">
     <span>${modalMealName}</span>`
@@ -52,7 +52,7 @@ function bannerModals(bannerModalProps) {
     // Banner Modal Ingredients Fetch
 
 
-    const bannerIngredients = document.querySelector('.bannerIngrediants');
+    const bannerIngredients = document.querySelector('. ');
 
      // Banner Modal Ingredients Array
      const bannerIngredientsArray = [bannerModal.strIngredient1, bannerModal.strIngredient2, bannerModal.strIngredient3,
@@ -136,7 +136,7 @@ const RandomMealUrl = ('https://www.themealdb.com/api/json/v1/1/random.php')
 
 fetch(RandomMealUrl)
     .then(res => res.json())
-    .then(data => { randomBanner(data), bannerModals(data) })
+    .then(data => { randomBanner(data), bannerModals(data) ,recipesCards(data)})
     .catch(error => ('error', error))
 
 
@@ -144,7 +144,7 @@ fetch(RandomMealUrl)
 for (let i = 1; i <=20; i++) {
     fetch(RandomMealUrl)
         .then(res => res.json())
-        .then(data => recipesCards(data))
+        .then(data => { bannerModals(data) ,recipesCards(data)})
         .catch(error => ('error', error))
 }
 
