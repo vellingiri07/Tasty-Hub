@@ -99,7 +99,7 @@ function bannerModals(bannerModalProps) {
     const bannerYoutube = document.querySelector('.bannerYoutube');
 
     bannerYoutube.innerHTML = ` <h2>YouTube Link</h2>
-    <iframe src=${modalMealYoutube} width="923" height="519" src=  frameborder="0"></iframe>
+    <iframe src=${modalMealYoutube} width="700" height="300" src=  frameborder="0"></iframe>
 `
 
     console.log('Banner Model', bannerModal)
@@ -139,7 +139,7 @@ fetch(RandomMealUrl)
 
 
 
-for (let i = 1; i < 20; i++) {
+for (let i = 1; i <=20; i++) {
     fetch(RandomMealUrl)
         .then(res => res.json())
         .then(data => recipesCards(data))
