@@ -26,12 +26,14 @@ nav {
     justify-content: flex-start;
     height: 29px;
     column-gap: 3px;
+
 }
 
 .searchBar input{
     width: 250px;
     height: 40px;
     border-radius: 20px;
+
 }
 
 .searchBar input, input::placeholder{
@@ -87,7 +89,7 @@ nav {
 
 /* Banner Model Style */
 
-.bannerModalContainer {
+.bannerModalContainer,.recipesCardModalContainer {
     align-items: center;
     height: 1000px;
     width: 100vw;
@@ -100,29 +102,29 @@ nav {
 
 /* Banner Model Layout 2 */
 
-.bannerModalClose {
+.bannerModalClose,.recipesCardModalClose {
     display: flex;
     justify-content: flex-end;
     padding: 10px;
     padding-right: 50px;
 }
 
-.bannerModalClose img{
+.bannerModalClose img,.recipesCardModalClose img{
     width: 40px;
 }
 
-.bannerModalHead{
+.bannerModalHead,.recipesCardModalHead{
     display: flex;
     padding: 20px;
     padding-left: 150px;
 }
 
-.bannerModalHead img{
+.bannerModalHead img,.recipesCardModalHead img{
    border-radius: 10px;
     width:250px;
 }
 
-.bannerModalHead span{
+.bannerModalHead span,.recipesCardModalHead span{
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -130,14 +132,14 @@ nav {
     font-size: 40px;
 }
 
-.bannerModalDetails{
+.bannerModalDetails,.recipesCardModalDetails{
    padding: 50px;
    display: flex;
    flex-direction: column;
    row-gap: 50px;
 }
 
-.bannerIngrediants ul{
+.bannerIngrediants ul,.recipesModalIngrediants ul{
     padding: 2px;
     padding-left: 50px;
 }
@@ -411,6 +413,19 @@ nav {
     .recipesCardContainer {
         display: flex;
         flex-direction: column;
+    }
+
+    .recipesCards {
+        /* border: 2px solid blueviolet; */
+        height: 300px;
+        border-radius: 10px;
+
+    }
+
+    .recipesCards img {
+        height: 200px;
+        width: 100%;
+        border-radius: 15px;
     }
 
     .recipesCards {
