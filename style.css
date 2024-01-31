@@ -113,25 +113,24 @@ nav {
     width: 40px;
 }
 
-.bannerModalHead,.recipesCardModalHead{
+.bannerModalHead{
     display: flex;
+    justify-content: center;
     padding: 20px;
-    padding-left: 150px;
 }
 
-.bannerModalHead img,.recipesCardModalHead img{
+.bannerModalHead img{
    border-radius: 10px;
     width:250px;
 }
 
-.bannerModalHead span,.recipesCardModalHead span{
+.bannerModalHead span{
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 500px;
     font-size: 40px;
 }
-
 .bannerModalDetails,.recipesCardModalDetails{
    padding: 50px;
    display: flex;

@@ -52,7 +52,7 @@ function bannerModals(bannerModalProps) {
     // Banner Modal Ingredients Fetch
 
 
-    const bannerIngredients = document.querySelector('. ');
+    const bannerIngredients = document.querySelector('.bannerIngrediants ');
 
      // Banner Modal Ingredients Array
      const bannerIngredientsArray = [bannerModal.strIngredient1, bannerModal.strIngredient2, bannerModal.strIngredient3,
@@ -78,8 +78,8 @@ function bannerModals(bannerModalProps) {
            console.log("ingredients array length",bannerIngredientsArray.length)
         }
 
-        if(bannerIngredientsArray[i] == null && bannerMeasureArray[i] == null) {
-            break;
+        if(bannerIngredientsArray[i] == null || bannerMeasureArray[i] == null) {
+            continue;
 
         }
 
@@ -126,10 +126,7 @@ function recipesCards(recipesCardsProps) {
     </div>`
 }
 
-
-
 // Random Meal API Url 
-
 
 const RandomMealUrl = ('https://www.themealdb.com/api/json/v1/1/random.php')
 
