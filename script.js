@@ -136,7 +136,7 @@ const RandomMealUrl = ('https://www.themealdb.com/api/json/v1/1/random.php')
 
 fetch(RandomMealUrl)
     .then(res => res.json())
-    .then(data => { randomBanner(data), bannerModals(data) ,recipesCards(data)})
+    .then(data => { randomBanner(data), bannerModals(data) })
     .catch(error => ('error', error))
 
 
@@ -144,7 +144,7 @@ fetch(RandomMealUrl)
 for (let i = 1; i <=20; i++) {
     fetch(RandomMealUrl)
         .then(res => res.json())
-        .then(data => { bannerModals(data) ,recipesCards(data)})
+        .then(data => { recipesCards(data)})
         .catch(error => ('error', error))
 }
 
