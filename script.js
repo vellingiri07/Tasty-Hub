@@ -55,18 +55,35 @@ function bannerModals(bannerModalProps) {
     const bannerIngredients = document.querySelector('.bannerIngrediants ');
 
      // Banner Modal Ingredients Array
-     const bannerIngredientsArray = [bannerModal.strIngredient1, bannerModal.strIngredient2, bannerModal.strIngredient3,
+     /*const bannerIngredientsArray = [bannerModal.strIngredient1, bannerModal.strIngredient2, bannerModal.strIngredient3,
         bannerModal.strIngredient4, bannerModal.strIngredient5, bannerModal.strIngredient6, bannerModal.strIngredient7, bannerModal.strIngredient8, bannerModal.strIngredient9, bannerModal.strIngredient10, bannerModal.strIngredient11, bannerModal.strIngredient12, bannerModal.strIngredient13,
         bannerModal.strIngredient14, bannerModal.strIngredient15, bannerModal.strIngredient16, bannerModal.strIngredient17, bannerModal.strIngredient18, bannerModal.strIngredient19, bannerModal.strIngredient20];
-    
+    */
+
+        var bannerIngredientsArray=[]
+
+        const bannerMeasureArray =[]
+
+        for(let k=1;k<=20;k++){
+            let ingredients=bannerModal.strIngredient[i];
+
+            let measures=bannerModal.strMeasure[i]
+
+            bannerIngredients.push(ingredients)
+
+            bannerMeasureArray.push(measures)
+        }
+
+        console.log("banner ins",bannerIngredients)
+
 
     // Banner Modal Measure Array
 
-    const bannerMeasureArray = [bannerModal.strMeasure1, bannerModal.strMeasure2, bannerModal.strMeasure3,
+   /* const bannerMeasureArray = [bannerModal.strMeasure1, bannerModal.strMeasure2, bannerModal.strMeasure3,
     bannerModal.strMeasure4, bannerModal.strMeasure5, bannerModal.strMeasure6, bannerModal.strMeasure7, bannerModal.strMeasure8, bannerModal.strMeasure9, bannerModal.strMeasure10, bannerModal.strMeasure11, bannerModal.strMeasure12, bannerModal.strMeasure13,
     bannerModal.strMeasure14, bannerModal.strMeasure15, bannerModal.strMeasure16, bannerModal.strMeasure17, bannerModal.strMeasure18, bannerModal.strMeasure19, bannerModal.strMeasure20];
 
-     
+     */
 
     for (let i = 0; i < 20; i++) {
         if (bannerIngredientsArray[i].length != 0 && bannerMeasureArray[i].length != 0) {
