@@ -60,7 +60,7 @@ function bannerModals(bannerModalProps) {
         bannerModal.strIngredient14, bannerModal.strIngredient15, bannerModal.strIngredient16, bannerModal.strIngredient17, bannerModal.strIngredient18, bannerModal.strIngredient19, bannerModal.strIngredient20];
     */
 
-        var bannerIngredientsArray=[]
+        var bannerIngredientsArray=[];
 
         const bannerMeasureArray =[]
 
