@@ -43,7 +43,7 @@ function bannerModals(bannerModalProps) {
 
     const bannerModalHead = document.querySelector('.bannerModalHead')
 
-    bannerModalHead.innerHTML += ` 
+    bannerModalHead.innerHTML = ` 
     <div class="bannerModalHead ">
     <img src=${modalMealImg} alt="">
     <span>${modalMealName}</span>`
@@ -52,20 +52,19 @@ function bannerModals(bannerModalProps) {
     // Banner Modal Ingredients Fetch
 
 
-    const bannerIngredients = document.querySelector('.bannerIngrediants ');
+    const bannerIngredients = document.querySelector('.bannerIngrediants');
 
      // Banner Modal Ingredients Array
-        const bannerIngredientsArray = [bannerModal.strIngredient1, bannerModal.strIngredient2, bannerModal.strIngredient3,
+     const bannerIngredientsArray = [bannerModal.strIngredient1, bannerModal.strIngredient2, bannerModal.strIngredient3,
         bannerModal.strIngredient4, bannerModal.strIngredient5, bannerModal.strIngredient6, bannerModal.strIngredient7, bannerModal.strIngredient8, bannerModal.strIngredient9, bannerModal.strIngredient10, bannerModal.strIngredient11, bannerModal.strIngredient12, bannerModal.strIngredient13,
         bannerModal.strIngredient14, bannerModal.strIngredient15, bannerModal.strIngredient16, bannerModal.strIngredient17, bannerModal.strIngredient18, bannerModal.strIngredient19, bannerModal.strIngredient20];
     
 
-
     // Banner Modal Measure Array
 
-        const bannerMeasureArray = [bannerModal.strMeasure1, bannerModal.strMeasure2, bannerModal.strMeasure3,
-        bannerModal.strMeasure4, bannerModal.strMeasure5, bannerModal.strMeasure6, bannerModal.strMeasure7, bannerModal.strMeasure8, bannerModal.strMeasure9, bannerModal.strMeasure10, bannerModal.strMeasure11, bannerModal.strMeasure12, bannerModal.strMeasure13,
-        bannerModal.strMeasure14, bannerModal.strMeasure15, bannerModal.strMeasure16, bannerModal.strMeasure17, bannerModal.strMeasure18, bannerModal.strMeasure19, bannerModal.strMeasure20];
+    const bannerMeasureArray = [bannerModal.strMeasure1, bannerModal.strMeasure2, bannerModal.strMeasure3,
+    bannerModal.strMeasure4, bannerModal.strMeasure5, bannerModal.strMeasure6, bannerModal.strMeasure7, bannerModal.strMeasure8, bannerModal.strMeasure9, bannerModal.strMeasure10, bannerModal.strMeasure11, bannerModal.strMeasure12, bannerModal.strMeasure13,
+    bannerModal.strMeasure14, bannerModal.strMeasure15, bannerModal.strMeasure16, bannerModal.strMeasure17, bannerModal.strMeasure18, bannerModal.strMeasure19, bannerModal.strMeasure20];
 
      
 
@@ -79,8 +78,8 @@ function bannerModals(bannerModalProps) {
            console.log("ingredients array length",bannerIngredientsArray.length)
         }
 
-        if(bannerIngredientsArray[i] == null || bannerMeasureArray[i] == null) {
-            continue;
+        if(bannerIngredientsArray[i] == null && bannerMeasureArray[i] == null) {
+            break;
 
         }
 
@@ -120,7 +119,7 @@ function recipesCards(recipesCardsProps) {
     const cardsMealName = recipesCard.strMeal;
 
     recipesCardContainer.innerHTML += `
-    <div class="recipesCards" onclick=recipesCardModal() >
+    <div class="recipesCards">
         <img src=${cardsMealImage} >
         <span class="recipesNames">${cardsMealName}</span>
       
@@ -128,6 +127,7 @@ function recipesCards(recipesCardsProps) {
 }
 
 // Random Meal API Url 
+
 
 const RandomMealUrl = ('https://www.themealdb.com/api/json/v1/1/random.php')
 
@@ -142,7 +142,7 @@ fetch(RandomMealUrl)
 for (let i = 1; i <=20; i++) {
     fetch(RandomMealUrl)
         .then(res => res.json())
-        .then(data => { recipesCards(data)})
+        .then(data => recipesCards(data))
         .catch(error => ('error', error))
 }
 
@@ -154,4 +154,3 @@ function openBannerModal() {
 function closeBannerModal() {
     bannerModalContainer.close();
 }
-
